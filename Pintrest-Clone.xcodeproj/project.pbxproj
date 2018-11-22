@@ -12,6 +12,9 @@
 		183CC0FC21A6742100D688AB /* AHPinDataGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CC0FB21A6742100D688AB /* AHPinDataGenerator.swift */; };
 		183CC0FE21A676FC00D688AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CC0FD21A676FC00D688AB /* Constants.swift */; };
 		183CC10321A67E5200D688AB /* AHCategoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CC10221A67E5200D688AB /* AHCategoryDataModel.swift */; };
+		183CC10721A68EED00D688AB /* AHOptionsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CC10621A68EED00D688AB /* AHOptionsHandler.swift */; };
+		183CC10921A68EFD00D688AB /* AHOptionsAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CC10821A68EFD00D688AB /* AHOptionsAnimator.swift */; };
+		183CC10B21A68F0F00D688AB /* AHOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183CC10A21A68F0F00D688AB /* AHOptionsVC.swift */; };
 		1875096421A5CD7D004582B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875096321A5CD7D004582B2 /* AppDelegate.swift */; };
 		1875096621A5CD7D004582B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1875096521A5CD7D004582B2 /* ViewController.swift */; };
 		1875096921A5CD7D004582B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1875096721A5CD7D004582B2 /* Main.storyboard */; };
@@ -31,6 +34,9 @@
 		183CC0FB21A6742100D688AB /* AHPinDataGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHPinDataGenerator.swift; sourceTree = "<group>"; };
 		183CC0FD21A676FC00D688AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		183CC10221A67E5200D688AB /* AHCategoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHCategoryDataModel.swift; sourceTree = "<group>"; };
+		183CC10621A68EED00D688AB /* AHOptionsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHOptionsHandler.swift; sourceTree = "<group>"; };
+		183CC10821A68EFD00D688AB /* AHOptionsAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHOptionsAnimator.swift; sourceTree = "<group>"; };
+		183CC10A21A68F0F00D688AB /* AHOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AHOptionsVC.swift; sourceTree = "<group>"; };
 		1875096021A5CD7D004582B2 /* Pintrest-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pintrest-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1875096321A5CD7D004582B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1875096521A5CD7D004582B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +99,33 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		183CC10421A68EC600D688AB /* PinVC */ = {
+			isa = PBXGroup;
+			children = (
+				183CC10521A68ED500D688AB /* Pin Options Animation */,
+			);
+			path = PinVC;
+			sourceTree = "<group>";
+		};
+		183CC10521A68ED500D688AB /* Pin Options Animation */ = {
+			isa = PBXGroup;
+			children = (
+				183CC10621A68EED00D688AB /* AHOptionsHandler.swift */,
+				183CC10821A68EFD00D688AB /* AHOptionsAnimator.swift */,
+				183CC10A21A68F0F00D688AB /* AHOptionsVC.swift */,
+			);
+			path = "Pin Options Animation";
+			sourceTree = "<group>";
+		};
+		183CC10C21A6B34100D688AB /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				1875096721A5CD7D004582B2 /* Main.storyboard */,
+				1875096C21A5CD7F004582B2 /* LaunchScreen.storyboard */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 		1875095721A5CD7D004582B2 = {
 			isa = PBXGroup;
 			children = (
@@ -112,14 +145,14 @@
 		1875096221A5CD7D004582B2 /* Pintrest-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				183CC0FF21A67E0600D688AB /* Discover */,
+				183CC10C21A6B34100D688AB /* Interfaces */,
 				183CC0F621A66AC700D688AB /* Other */,
+				183CC10421A68EC600D688AB /* PinVC */,
+				183CC0FF21A67E0600D688AB /* Discover */,
 				1875097821A5D156004582B2 /* AHCollectionVC */,
 				1875097521A5CDC3004582B2 /* Navigation */,
 				1875096521A5CD7D004582B2 /* ViewController.swift */,
-				1875096721A5CD7D004582B2 /* Main.storyboard */,
 				1875096A21A5CD7F004582B2 /* Assets.xcassets */,
-				1875096C21A5CD7F004582B2 /* LaunchScreen.storyboard */,
 				1875096F21A5CD7F004582B2 /* Info.plist */,
 			);
 			path = "Pintrest-Clone";
@@ -225,13 +258,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1875098321A5EC54004582B2 /* AHDataSourceCenter.swift in Sources */,
+				183CC10921A68EFD00D688AB /* AHOptionsAnimator.swift in Sources */,
 				183CC0FA21A6705B00D688AB /* AHNetowrkTool.swift in Sources */,
 				1875096621A5CD7D004582B2 /* ViewController.swift in Sources */,
 				1875097D21A5D54E004582B2 /* AHLayout.swift in Sources */,
+				183CC10721A68EED00D688AB /* AHOptionsHandler.swift in Sources */,
 				1875097721A5CDDC004582B2 /* AHNavigationController.swift in Sources */,
 				183CC10321A67E5200D688AB /* AHCategoryDataModel.swift in Sources */,
 				1875096421A5CD7D004582B2 /* AppDelegate.swift in Sources */,
 				1875097B21A5D1A3004582B2 /* AHLayoutRouter.swift in Sources */,
+				183CC10B21A68F0F00D688AB /* AHOptionsVC.swift in Sources */,
 				1875098121A5E949004582B2 /* AHDelegatesCenter.swift in Sources */,
 				183CC0F821A66ADC00D688AB /* AHRefershUI.swift in Sources */,
 				183CC0FC21A6742100D688AB /* AHPinDataGenerator.swift in Sources */,
