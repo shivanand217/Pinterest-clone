@@ -29,9 +29,27 @@ class AHOptionsVC: UIViewController {
     var allButtons: [UIButton]?
     
     fileprivate var buttonsPositions: ButtonsPositions? = nil {
-        
+        didSet {
+            if buttonsPositions != nil {
+                btnLeft.center = startingPoint!
+                btnMiddle.center = startingPoint!
+                btnRight.center = startingPoint!
+            }
+        }
     }
     
+    var startingPoint: CGPoint? {
+        didSet {
+            if let startingPoint = startingPoint {
+                buttonsPositions = ButtonsPositions(anchor: startingPoint, radius: radius)
+                buttonsPositions?.decide()
+                fingerRingView.center = startingPoint
+                fingerRingView.bounds.size = fingerRingSize
+                self.view.addSubview(fingerRingView)
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
 }
 
 fileprivate struct ButtonsPositions {
