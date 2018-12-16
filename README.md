@@ -1,2 +1,2 @@
 # Pinterest-clone
-Pinterest clone for iOS.
+An attempt to make a Pinterest clone for iOS.
